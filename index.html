@@ -1,13 +1,190 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Class Profiles</title>
-  </head>
-  <body>
-    <h1>Welcome</h1>
-    <p>Select a profile:</p>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>My Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #ffdecf;
+    --panel: #ffd3d0;
+    --accent: #ff8b9a;
+    --text-dark: #3b2b35;
+  }
 
-    <a href="jauod.html">Jaoud</a><br>
-    <a href="pasaylo.html">Pasaylo</a><br>
-  </body>
+  html, body {
+    margin:0;
+    height:100%;
+    font-family:"Quicksand", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: var(--bg);
+  }
+
+  .stage {
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    box-sizing:border-box;
+  }
+
+  .card {
+    width:95%;
+    max-width:1400px;
+    height:90%;
+    background: linear-gradient(180deg,var(--panel), #ffd9d6);
+    border-radius:20px;
+    padding:28px;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    box-sizing:border-box;
+  }
+
+  .top {
+    display:flex;
+    align-items:center;
+    gap:28px;
+    flex:0 0 auto;
+  }
+
+  .photo-wrap {
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    overflow:hidden;
+    background-color:#f7e9ea;
+    border:5px solid rgba(255,255,255,0.85);
+  }
+
+  .photo-wrap .avatar {
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background-size:cover;
+    background-position:center;
+  }
+
+  .headline {
+    font-size:32px;
+    font-weight:700;
+    color:var(--text-dark);
+  }
+
+  .subhead {
+    font-size:18px;
+    font-weight:600;
+    opacity:0.9;
+    color:var(--text-dark);
+    margin-top:6px;
+  }
+
+  .divider {
+    height:6px;
+    background: linear-gradient(90deg, rgba(255,139,154,0.9), rgba(255,196,185,0.9));
+    border-radius:6px;
+    margin-top:6px;
+  }
+
+  .main {
+    display:flex;
+    flex:1 1 auto;
+    gap:24px;
+    margin-top:6px;
+  }
+
+  .info-panel {
+    flex:1.2 1 0;
+    background: rgba(255,255,255,0.35);
+    border-radius:14px;
+    padding:26px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    font-size:20px;
+    color:var(--text-dark);
+  }
+
+  .row { display:flex; gap:12px; align-items:center; }
+  .info-label { font-weight:700; min-width:130px; }
+  .info-value { font-weight:500; opacity:0.95; }
+
+  .side {
+    flex:0.9 0 340px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+
+  .card-box {
+    background: rgba(255,255,255,0.45);
+    border-radius:12px;
+    padding:18px;
+    color:var(--text-dark);
+  }
+
+  .card-title { font-weight:700; font-size:20px; margin-bottom:10px; }
+
+  .hobbies {
+    width:100%;
+    min-height:100px;
+    border-radius:10px;
+    padding:10px 12px;
+    font-size:15px;
+    border:none;
+    outline:none;
+    background: rgba(255,255,255,0.35);
+    color:var(--text-dark);
+  }
+
+  @media (max-width:1000px){
+    .main { flex-direction:column; }
+    .side { width:100%; }
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="card">
+
+   
+    <div class="top">
+      <div>
+        <div class="headline">Pasaylo, Katrcia Mae G.</div>
+        <div class="subhead">BSIT • Section 22009</div>
+        <div style="margin-top:8px; color:var(--text-dark); opacity:0.9;">Bestlink College of the Philippines</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+   
+    <div class="main">
+      <section class="info-panel">
+        <div style="font-size:18px;font-weight:700;margin-bottom:6px;">Personal Information</div>
+        <div class="row"><div class="info-label">Age</div><div class="info-value">19</div></div>
+        <div class="row"><div class="info-label">Location</div><div class="info-value">Caloocan City</div></div>
+        <div class="row"><div class="info-label">Course</div><div class="info-value">BSIT</div></div>
+        <div class="row"><div class="info-label">School</div><div class="info-value">Bestlink College of the Philippines</div></div>
+
+      </section>
+
+      <aside class="side">
+        <div class="card-box">
+          <div class="card-title">Social Media</div>
+ <div><strong>Facebook:</strong> <a href="https://www.facebook.com/katriciamae.pasaylo" target="_blank">katriciamae.pasaylo</a></div>
+  <div><strong>Instagram:</strong> <a href="https://www.instagram.com/_katsera?igsh=MTJucGZkMHBpOWg3Yg==" target="_blank">_katsera</a></div>
+          <div><strong>TikTok:</strong> <a href="@katreeshx">katreeshx</a></div>
+        </div>
+
+        <div class="card-box">
+          <div class="card-title">Hobbies</div>
+          <div class="hobbies">Watching movies, drawing, playing games and drink coffee</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+</body>
 </html>
